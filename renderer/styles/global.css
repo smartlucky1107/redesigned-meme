@@ -1,0 +1,341 @@
+.app-container {
+    min-height: 350px;
+}
+
+@font-face {
+  font-family: 'remington';
+  src: url(../public/font/RMGRR.TTF);
+}
+@font-face {
+  font-family: 'mangal';
+  src: url(../public/font/MANGAL.TTF);
+}
+@font-face {
+  font-family: 'krutidev';
+  src: url(../public/font/Kruti\ Dev\ 010\ Regular.ttf);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(../public/images/banner.jpg);
+  
+}
+::selection{
+  color: #fff;
+  background: #17A2B8;
+}
+.wrapper{
+  width: 770px;
+  padding: 35px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+}
+.wrapper .input-field{
+  opacity: 0;
+  z-index: -999;
+  position: absolute;
+}
+.wrapper .content-box{
+  padding: 13px 20px 0;
+  border-radius: 10px;
+  border: 1px solid #bfbfbf;
+}
+.content-box .typing-text{
+  overflow: hidden;
+  max-height: 256px;
+}
+.typing-text::-webkit-scrollbar{
+  width: 0;
+}
+.typing-text p{
+  font-size: 21px;
+  text-align: justify;
+  letter-spacing: 1px;
+  word-break: break-all;
+}
+.typing-text p span{
+  position: relative;
+}
+.typing-text p span.correct{
+  color: #56964f;
+}
+.typing-text p span.incorrect{
+  color: #cb3439;
+  outline: 1px solid #fff;
+  background: #ffc0cb;
+  border-radius: 4px;
+}
+.typing-text p span.active{
+  color: #17A2B8;
+}
+.typing-text p span.active::before{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 5px;
+  background: #17A2B8;
+  animation: blink 1s ease-in-out infinite;
+}
+@keyframes blink{
+  50%{ 
+    opacity: 1; 
+  }
+}
+.content-box .content{
+  margin-top: 17px;
+  display: flex;
+  padding: 12px 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #bfbfbf;
+}
+.wrapper .content button{
+  outline: none;
+  border: none;
+  width: 105px;
+  color: #fff;
+  padding: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #17A2B8;
+  transition: transform 0.3s ease;
+  margin: 0 0 1rem 0;
+}
+.content button:active{
+  transform: scale(0.97);
+}
+.wrapper button{
+  outline: none;
+  border: none;
+  width: 105px;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  padding: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #17A2B8;
+  transition: transform 0.3s ease;
+} 
+.wrapper > span {
+  display: inline-block;
+  outline: none;
+  border: none;
+  width: 105px;
+  text-align: center;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  padding: 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #17A2B8;
+  transition: transform 0.3s ease;
+}
+.content .result-details{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: calc(100% - 140px);
+  justify-content: space-between;
+}
+.content p , ul{
+    margin-bottom: 0;
+}
+.result-details li{
+  display: flex;
+  height: 20px;
+  list-style: none;
+  position: relative;
+  align-items: center;
+}
+.result-details li:not(:first-child){
+  padding-left: 22px;
+}
+.result-details li p{
+  font-size: 19px;
+}
+.result-details li span{
+  display: block;
+  font-size: 20px;
+  margin-left: 10px;
+}
+li span b{
+  font-weight: 500;
+}
+li:not(:first-child) span{
+  font-weight: 500;
+}
+.copyright {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+}
+.exam-name-input {
+    width: 80%;
+    height: 5rem;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+.welcome-title {
+    margin-bottom: 3rem;
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: 85px;
+    font-weight: 700;
+    color: white;
+}
+.typing-text p span {
+  font-family: inherit;
+}
+.wrapper  {
+  position: relative;
+}
+.wrapper select {
+  position: absolute;
+  top: 2.3rem;
+  right: 2.3rem;
+  padding: 5px;
+  font-size: 1.4rem;
+  color: white;
+  background: #17A2B8;
+  border-color: #17A2B8;
+  border-radius: 3px;
+}
+
+.read_more {
+    font-size: 17px;
+    background-color: #fff;
+    color: #000;
+    padding: 15px 0px;
+    width: 100%;
+    max-width: 198px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 3rem;
+    transition: ease-in all 0.5s;
+    font-weight: 500;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: all .35s;
+}
+
+@media (max-width: 991px) {
+    .welcome-title {
+        font-size: 4rem;
+        letter-spacing: 48px;
+    }
+}
+@media (max-width: 991px) {
+    @media (min-width: 768px) {
+        .container {
+            max-width: 100%
+        }
+    }
+}
+
+@media (max-width: 745px) {
+  .wrapper{
+    padding: 20px;
+  }
+  .content-box .content{
+    padding: 20px 0;
+  }
+  .content-box .typing-text{
+    max-height: 100%;
+  }
+  .typing-text p{
+    font-size: 19px;
+    text-align: left;
+  }
+  .typing-text p span {
+    font-family: inherit;
+  }
+  .content button{
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  .content .result-details{
+    width: 100%;
+  }
+  .result-details li:not(:first-child){
+    border-left: 0;
+    padding: 0;
+  }
+  .result-details li p, 
+  .result-details li span{
+    font-size: 17px;
+  }
+}
+@media (max-width: 518px) {
+  .wrapper .content-box{
+    padding: 10px 15px 0;
+  }
+  .typing-text p{
+    font-size: 18px;
+  }
+  .result-details li{
+    margin-bottom: 10px;
+  }
+  .content button{
+    margin-top: 10px;
+  }
+}
+.lang-switcher {
+  display: inline-block;
+  margin-right: 5rem;
+}
+.edit_modal {
+    inset: 50% auto auto 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    background-color: #17A2B8;
+}
+.edit_area {
+  width: 100%;
+  font-size: 2rem;
+  padding: 2rem;
+}
+.edit_button {
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+}
+.wrapper > .edit-button {
+  margin-left: 5rem;
+}
+
+
